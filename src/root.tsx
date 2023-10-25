@@ -1,5 +1,5 @@
-import { Counter } from "./components/counter/counter";
-import { Logo } from "./components/logo/logo";
+import { ToastProvider } from "./app/context/toast-provider";
+import { Example } from "./example/example";
 
 export default () => {
   return (
@@ -9,8 +9,9 @@ export default () => {
         <title>Qwik Blank App</title>
       </head>
       <body>
-        <Logo />
-        <Counter />
+        <ToastProvider>
+          <Example />
+        </ToastProvider>
       </body>
     </>
   );

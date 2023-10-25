@@ -1,0 +1,34 @@
+:root {
+    --toast-color-dark: #18181b;
+    --toast-color-light: #fff;
+    --toast-padding: 20px;
+    --toast-radius: 2px;
+
+    --hype-font-family: sans-serif;
+    --hype-z-index: 9999;
+}
+
+// TODO: WRAPPER
+
+.toast_wrapper {
+    position: absolute;
+}
+
+.TR {
+    top: 20px;
+    right: 20px;
+}
+
+// TODO: toast
+
+.toast {
+    background-color: var(--toast-color-dark);
+    color: var(--toast-color-light);
+    padding: 10px var(--toast-padding);
+    border-radius: var(--toast-radius);
+    font-family: var(--hype-font-family);
+}
+
+.TR__mr {
+    margin-bottom: 25px;
+  }
