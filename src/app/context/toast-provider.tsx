@@ -1,8 +1,8 @@
-import { Slot, component$, useContextProvider, useStore, useVisibleTask$ } from '@builder.io/qwik';
+import { Slot, component$, useContextProvider, useStore, useStyles$, useVisibleTask$ } from '@builder.io/qwik';
 
 import { ToastContext, ToastState } from './toast-context';
 import { ToastWrapper } from '../components/wrapper/wrapper';
-import '../../scss/main.scss';
+import styles from '../../scss/main.scss?inline';
 interface Props {
   data?: ToastState;
 }
@@ -26,7 +26,7 @@ export const ToastProvider = component$(({data}: Props) => {
     }
 
   })
-
+  useStyles$(styles);
   return <>
     <Slot />
     <ToastWrapper />

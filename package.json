@@ -1,7 +1,15 @@
 {
-  "name": "my-qwik-library-name",
-  "version": "0.0.1",
-  "description": "Create a reusable Qwik component library",
+  "name": "toast-qwik",
+  "version": "0.0.2",
+  "description": "🎉 Qwik-Toast allows you to add notifications to your app with ease. No more nonsense!",
+  "keywords": ["qwik", "toast", "alert", "notification"],
+  "license": "MIT",
+  "author": "Hype",
+  "homepage": "https://www.npmjs.com/package/toast-qwik#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://www.npmjs.com/package/toast-qwik"
+  },
   "main": "./lib/index.qwik.mjs",
   "qwik": "./lib/index.qwik.mjs",
   "types": "./lib-types/index.d.ts",
