@@ -1,14 +1,14 @@
 {
   "name": "toast-qwik",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "🎉 Qwik-Toast allows you to add notifications to your app with ease. No more nonsense!",
   "keywords": ["qwik", "toast", "alert", "notification"],
   "license": "MIT",
   "author": "Hype",
-  "homepage": "https://www.npmjs.com/package/toast-qwik#readme",
+  "homepage": "https://github.com/TFX0019/toast-qwik#readme",
   "repository": {
     "type": "git",
-    "url": "https://www.npmjs.com/package/toast-qwik"
+    "url": "https://github.com/TFX0019/toast-qwik"
   },
   "main": "./lib/index.qwik.mjs",
   "qwik": "./lib/index.qwik.mjs",
