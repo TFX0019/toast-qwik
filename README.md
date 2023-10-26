@@ -1,47 +1,43 @@
-# Qwik Library ⚡️
+# Toast-Qwik
 
-- [Qwik Docs](https://qwik.builder.io/)
-- [Discord](https://qwik.builder.io/chat)
-- [Qwik on GitHub](https://github.com/BuilderIO/qwik)
-- [@QwikDev](https://twitter.com/QwikDev)
-- [Vite](https://vitejs.dev/)
-- [Partytown](https://partytown.builder.io/)
-- [Mitosis](https://github.com/BuilderIO/mitosis)
-- [Builder.io](https://www.builder.io/)
+🎉 Qwik-Toast allows you to add notifications to your app with ease. No more nonsense!
 
----
-
-## Project Structure
-
-Inside your project, you'll see the following directories and files:
+## Installation
 
 ```
-├── public/
-│   └── ...
-└── src/
-    ├── components/
-    │   └── ...
-    └── index.ts
+$ npm install --save toast-qwik
+$ yarn add toast-qwik
+$ bun install toast-qwik
+$ npm install toast-qwik 
 ```
 
-- `src/components`: Recommended directory for components.
+## setting
+_src/routes/layout.tsx_
+```jsx
+import { component$, Slot } from "@builder.io/qwik";
+import { ToastProvider } from "toast-qwik";
 
-- `index.ts`: The entry point of your component library, make sure all the public components are exported from this file.
-
-## Development
-
-Development mode uses [Vite's development server](https://vitejs.dev/). For Qwik during development, the `dev` command will also server-side render (SSR) the output. The client-side development modules are loaded by the browser.
-
+export default component$(() => {
+  return (
+    <ToastProvider>
+        <Slot />
+    </ToastProvider>
+    );
+});
 ```
-bun dev
-```
 
-> Note: during dev mode, Vite will request many JS files, which does not represent a Qwik production build.
+## use
+_src/routes/index.tsx_
+```jsx
+import { component$ } from "@builder.io/qwik";
+import { useToast } from "toast-qwik";
 
-## Production
-
-The production build should generate the production build of your component library in (./lib) and the typescript type definitions in (./lib-types).
-
-```
-bun build
+export default component$(() => {
+  const toast = useToast();
+  return (
+    <>
+      <button onClick$={() => toast.error('test toast')}>Test toast</button>
+    </>
+  );
+});
 ```
