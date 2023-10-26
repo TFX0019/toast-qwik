@@ -9,7 +9,11 @@ export default () => {
         <title>Qwik Blank App</title>
       </head>
       <body>
-        <ToastProvider>
+        <ToastProvider config={{
+          position: 'BR',
+          duration: 5000,
+          items: []
+        }}>
           <Example />
         </ToastProvider>
       </body>

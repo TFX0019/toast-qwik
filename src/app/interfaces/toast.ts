@@ -1,9 +1,9 @@
-export type POSITION = 'TL' | 'TR' | 'BL' | 'BR' ;
-export type TYPE = 'success' | 'warning' | 'error' | 'info';
+export type ToastPosition = 'TL' | 'TR' | 'BL' | 'BR';
+export type ToastType = 'default' | 'success' | 'warning' | 'danger' | 'info';
 
 export interface ToastItem {
     id: number;
     duration: number;
-    type: TYPE;
+    type: ToastType;
     message: string;
 }

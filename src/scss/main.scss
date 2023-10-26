@@ -1,6 +1,11 @@
 :root {
     --toast-color-dark: #18181b;
     --toast-color-light: #fff;
+    --toast-color-danger: #ef4444;
+    --toast-color-success: #22c55e;
+    --toast-color-info: #0284c7;
+    --toast-color-warning: #eab308;
+
     --toast-padding: 20px;
     --toast-radius: 2px;
 
@@ -14,10 +19,42 @@
     position: absolute;
 }
 
+// wrapper positions
 .TR {
     top: 20px;
     right: 20px;
 }
+
+.TL {
+    top: 20px;
+    left: 20px;
+}
+
+.BR {
+    bottom: 20px;
+    right: 20px;
+}
+
+.BL {
+    bottom: 20px;
+    left: 20px;
+}
+
+// .TC {
+//     // min-width: 300px;
+//     // max-width: 450px;
+//     text-align: center;
+//     // margin: auto;
+//     top: 20px;
+//     right: 0px;
+//     left: 0px;
+// }
+
+// .BC {
+//     bottom: 20px;
+//     right: 0;
+//     left: 0;
+// }
 
 // TODO: toast
 
@@ -29,6 +66,27 @@
     font-family: var(--hype-font-family);
 }
 
-.TR__mr {
+// color
+.toast_danger {
+    background-color: var(--toast-color-danger);
+}
+.toast_info {
+    background-color: var(--toast-color-info);
+}
+.toast_warning {
+    background-color: var(--toast-color-warning);
+    color: var(--toast-color-dark);
+}
+.toast_success {
+    background-color: var(--toast-color-success);
+    color: var(--toast-color-dark);
+}
+
+.TR__mr, .TL__mr {
     margin-bottom: 25px;
   }
+
+  .BR__mr, .BL__mr {
+    margin-top: 25px;
+  }
+

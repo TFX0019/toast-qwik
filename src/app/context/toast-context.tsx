@@ -1,12 +1,11 @@
 import { createContextId } from "@builder.io/qwik";
-import { POSITION, TYPE, ToastItem } from "../interfaces/toast";
+import { ToastItem, ToastPosition } from "../interfaces/toast";
 
 
 
 export interface ToastState {
     duration: number;
-    position: POSITION;
-    type: TYPE;
+    position: ToastPosition;
     items: ToastItem[]
 }
 

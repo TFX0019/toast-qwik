@@ -4,25 +4,24 @@ import { ToastContext, ToastState } from './toast-context';
 import { ToastWrapper } from '../components/wrapper/wrapper';
 import styles from '../../scss/main.scss?inline';
 interface Props {
-  data?: ToastState;
+  config?: ToastState;
 }
 
-export const ToastProvider = component$(({data}: Props) => {
+export const ToastProvider = component$(({config}: Props) => {
   const toastData = useStore<ToastState>({
     duration: 5000,
     items: [],
     position: 'TR',
-    type: 'info'
   });
 
   useContextProvider(ToastContext, toastData);
 
   useVisibleTask$(() => {
-    if(data) {
-      toastData.duration = data.duration;
-      toastData.items = data.items;
-      toastData.position = data.position;
-      toastData.type = data.type;
+    if(config) {
+      // toastData = {...data, ...toastData};
+      toastData.duration = config.duration || toastData.duration;
+      toastData.items = config.items || toastData.items;
+      toastData.position = config.position || toastData.position;
     }
 
   })

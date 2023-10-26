@@ -19,7 +19,11 @@ import { ToastProvider } from "toast-qwik";
 
 export default component$(() => {
   return (
-    <ToastProvider>
+    <ToastProvider config={{
+          position: 'TL',
+          duration: 5000,
+          items: []
+        }}>
         <Slot />
     </ToastProvider>
     );
@@ -36,8 +40,18 @@ export default component$(() => {
   const toast = useToast();
   return (
     <>
-      <button onClick$={() => toast.error('test toast')}>Test toast</button>
+      <button onClick$={() => toast.default('test toast')}>Test toast</button>
     </>
   );
 });
+```
+
+## options
+
+```jsx
+toast.info(`Test of toast Qwik`) //blue
+toast.warn(`Test of toast Qwik`) // yellow
+toast.success(`Test of toast Qwik`) // green
+toast.default(`Test of toast Qwik`) // dark
+toast.error(`Test of toast Qwik`) // red
 ```
