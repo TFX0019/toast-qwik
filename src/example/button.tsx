@@ -1,7 +1,7 @@
-import { ButtonHTMLAttributes, Slot, component$ } from '@builder.io/qwik';
+// import { ButtonHTMLAttributes, Slot, component$ } from '@builder.io/qwik';
 
-export const Button = component$((props: ButtonHTMLAttributes<HTMLButtonElement>) => {
-  return <button {...props}>
-    <Slot />
-  </button>
-});
+// export const Button = component$((props: ButtonHTMLAttributes<HTMLButtonElement>) => {
+//   return <button {...props}>
+//     <Slot />
+//   </button>
+// });

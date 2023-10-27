@@ -40,30 +40,24 @@
     left: 20px;
 }
 
-// .TC {
-//     // min-width: 300px;
-//     // max-width: 450px;
-//     text-align: center;
-//     // margin: auto;
-//     top: 20px;
-//     right: 0px;
-//     left: 0px;
-// }
-
-// .BC {
-//     bottom: 20px;
-//     right: 0;
-//     left: 0;
-// }
+// animations
+@keyframes slideIn {
+    100% { margin-right: 0; }
+}
 
 // TODO: toast
 
 .toast {
+    // position: absolute;
+    // right: -450px;
     background-color: var(--toast-color-dark);
     color: var(--toast-color-light);
     padding: 10px var(--toast-padding);
     border-radius: var(--toast-radius);
     font-family: var(--hype-font-family);
+
+    animation: slideIn 350ms forwards;
+    animation-delay: 100ms;
 }
 
 // color
