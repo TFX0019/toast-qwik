@@ -11,7 +11,7 @@ export default () => {
       <body>
         <ToastProvider config={{
           position: 'BR',
-          duration: 5000,
+          duration: 100000,
           items: []
         }}>
           <Example />

@@ -55,3 +55,15 @@ toast.success(`Test of toast Qwik`) // green
 toast.default(`Test of toast Qwik`) // dark
 toast.error(`Test of toast Qwik`) // red
 ```
+
+## actions
+
+```jsx
+toast.info(`Test of toast Qwik`, {
+  closeable: true, 
+  action: {
+      content: 'SHOW',
+      onAction: $(() => console.log('SHOW'))
+    }})
+```
+
