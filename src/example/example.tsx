@@ -7,7 +7,10 @@ export const Example = component$(() => {
 
   const showInfo = $(() => {
     count.value++;
-    toast.info(`Test of toast Qwik ${count.value}`)
+    toast.info(`Test of toast Qwik ${count.value}`, {closeable: true, action: {
+      content: 'SHOW',
+      onAction: $(() => console.log('SHOW'))
+    }})
   })
 
   const showWarn = $(() => {

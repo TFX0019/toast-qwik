@@ -6,7 +6,7 @@
     --toast-color-info: #0284c7;
     --toast-color-warning: #eab308;
 
-    --toast-padding: 20px;
+    --toast-padding: 14px;
     --toast-radius: 2px;
 
     --hype-font-family: sans-serif;
@@ -64,6 +64,43 @@
     padding: 10px var(--toast-padding);
     border-radius: var(--toast-radius);
     font-family: var(--hype-font-family);
+
+    display: flex;
+    align-items: center;
+}
+
+.toast > .btn_closed {
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    height: 20px;
+    border: none;
+    background: none;
+    margin-left: 10px;
+    color: inherit;
+    cursor: pointer;
+    transition: background ease-in-out 300ms;
+}
+
+.toast > .btn_closed:hover {
+    background: rgba($color: #18181b, $alpha: 0.2);
+    border-radius: var(--toast-radius);
+}
+
+.toast > .btn_action {
+    font-weight: 600;
+    background: none;
+    border: none;
+    color: inherit;
+    margin-left: 10px;
+    cursor: pointer;
+    height: 20px;
+    transition: background ease-in-out 300ms;
+}
+
+.toast > .btn_action:hover {
+    background: rgba($color: #18181b, $alpha: 0.2);
+    border-radius: var(--toast-radius);
 }
 
 // color
@@ -83,10 +120,10 @@
 }
 
 .TR__mr, .TL__mr {
-    margin-bottom: 25px;
+    margin-bottom: 10px;
   }
 
   .BR__mr, .BL__mr {
-    margin-top: 25px;
+    margin-top: 10px;
   }
 
